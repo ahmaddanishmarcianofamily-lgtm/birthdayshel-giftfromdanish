@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Happy Birthday, Sayang 🎀</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND DECORATION -->
+<div class="bg-decor">
+    <span>♡</span>
+    <span>✦</span>
+    <span>♡</span>
+    <span>✧</span>
+    <span>♡</span>
+    <span>✦</span>
+    <span>♡</span>
+    <span>✧</span>
+</div>
+
+
+<!-- =========================
+     OPENING
+========================= -->
+
+<section id="opening" class="page">
+
+    <div class="card fade">
+
+        <div class="big-icon">🎀</div>
+
+        <p class="small-title">
+            ♡ A LITTLE SURPRISE FOR YOU ♡
+        </p>
+
+        <h1>
+            Happy Birthday,<br>
+            Sayang 💗
+        </h1>
+
+        <p class="subtitle">
+            I made something small...<br>
+            just for you.
+        </p>
+
+        <button onclick="openGift()">
+            OPEN YOUR GIFT 🎁
+        </button>
+
+        <p class="made">
+            made with love by Baby 🤍
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NOTES PAGE
+========================= -->
+
+<section id="notesPage" class="page hidden">
+
+    <div class="card fade">
+
+        <div class="big-icon">🌷</div>
+
+        <h1 class="page-title">
+            For You Shel 💗
+        </h1>
+
+
+        <!-- FOTO 1 -->
+
+        <img
+            src="photo1.jpg"
+            class="photo"
+            alt="Foto Sayang">
+
+
+        <div class="message">
+
+            Hari ini adalah hari spesial buat seseorang
+            yang juga sangat spesial buat aku. 💗
+
+            <br><br>
+
+            Aku cuma mau bilang,
+            terima kasih karena sudah hadir dan menjadi
+            bagian dari hari-hari aku.
+
+            <br><br>
+
+            Mungkin aku tidak selalu pandai menunjukkan
+            apa yang aku rasakan, tapi aku harap kau tahu
+            kalau kau adalah seseorang yang sangat berarti
+            buat aku. 🤍
+
+        </div>
+
+
+        <div class="divider">
+            ♡ ♡ ♡
+        </div>
+
+
+        <!-- FOTO 2 -->
+
+        <img
+            src="photo2.jpg"
+            class="photo"
+            alt="Another special photo">
+
+
+        <div class="message">
+
+            Semoga di umur mu yang baru ini,
+            semua hal baik datang satu per satu. ✨
+
+            <br><br>
+
+            Semoga kau selalu bahagia,
+            selalu dikelilingi orang-orang yang sayang sama kau,
+            dan semua impian mu dapat tercapai.
+
+            <br><br>
+
+            Aku harap hari ulang tahun kali ini
+            bisa menjadi salah satu kenangan kecil
+            yang membuat kamu tersenyum. 🎀
+
+            <br><br>
+
+            <b>
+                Happy birthday, my little princess. 🎂💗
+            </b>
+
+            <br><br>
+
+            Semoga hari ini seindah senyum mu,
+            dan semoga tahun ini membawa
+            banyak cerita indah buat mu.
+
+        </div>
+
+
+        <div class="divider">
+            ♡ ♡ ♡
+        </div>
+
+
+        <h2 class="pink-heading">
+            That's all from me 🎀
+        </h2>
+
+        <p>
+            Thank you for being you. 🤍
+        </p>
+
+        <p class="signature">
+            — Baby/Danish 💗
+        </p>
+
+
+        <button onclick="showGames()">
+            NEXT: MINI GAMES 🎮💗
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MINI GAMES PAGE
+========================= -->
+
+<section id="gamesPage" class="page hidden">
+
+    <div class="card fade">
+
+        <div class="big-icon">🎮</div>
+
+        <h1 class="page-title">
+            Little Surprise 🎀
+        </h1>
+
+        <p class="subtitle">
+            Ada beberapa mini game untuk kamu 💗
+        </p>
+
+
+
+        <!-- =====================
+             MUSIC
+        ====================== -->
+
+        <div class="extra-section music-box">
+
+            <div class="music-title">
+                🎵 OUR SPECIAL SONG
+            </div>
+
+            <p>
+                Dengarkan lagu ini sambil main ya 🤍
+            </p>
+
+            <audio id="birthdayMusic">
+                <source
+                    src="birthday-song.mp3"
+                    type="audio/mpeg">
+            </audio>
+
+            <button
+                onclick="toggleMusic()"
+                id="musicButton">
+                🎵 Play Our Song
+            </button>
+
+            <p
+                id="musicStatus"
+                class="game-info">
+                Lagu akan dimainkan selama 30 saat.
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================
+             CATCH THE HEARTS
+        ====================== -->
+
+        <div class="extra-section game-box">
+
+            <div class="game-title">
+                💗 CATCH THE HEARTS
+            </div>
+
+            <p class="game-info">
+                Tangkap hati sebelum dia menghilang! 😆
+            </p>
+
+            <div class="score">
+                Score:
+                <span id="heartScore">0</span>
+            </div>
+
+            <div
+                id="catchArea"
+                class="catch-area">
+
+                <div
+                    id="catchMessage"
+                    class="catch-message">
+                    Tekan START untuk mulai 💗
+                </div>
+
+            </div>
+
+            <p id="timerText">
+                Time: 15
+            </p>
+
+            <button
+                onclick="startHeartGame()"
+                id="startHeartButton">
+                💗 START GAME
+            </button>
+
+            <p
+                id="heartResult"
+                class="game-result">
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================
+             GUESS THE GIFT
+        ====================== -->
+
+        <div class="extra-section game-box">
+
+            <div class="game-title">
+                🎁 GUESS THE GIFT
+            </div>
+
+            <p class="game-info">
+                Pilih satu kotak... 👀
+            </p>
+
+            <p id="giftInstruction">
+                Dua pilihan pertama salah.
+                Pilihan terakhir adalah hadiahmu 💗
+            </p>
+
+
+            <div class="gift-container">
+
+                <button
+                    class="gift-box"
+                    data-box="1"
+                    onclick="chooseGift(this)">
+
+                    🎁
+
+                </button>
+
+
+                <button
+                    class="gift-box"
+                    data-box="2"
+                    onclick="chooseGift(this)">
+
+                    🎁
+
+                </button>
+
+
+                <button
+                    class="gift-box"
+                    data-box="3"
+                    onclick="chooseGift(this)">
+
+                    🎁
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="giftResult"
+                class="result">
+            </div>
+
+
+            <div
+                id="giftImage"
+                class="gift-image hidden">
+
+                <img
+                    src="danish-gift.jpg"
+                    alt="Hadiah spesial">
+
+                <p>
+                    🎉 Kamu menemukan hadiah spesial! 💗
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             SECRET MESSAGE
+        ====================== -->
+
+        <div class="extra-section game-box">
+
+            <div class="game-title">
+                🔐 SECRET MESSAGE
+            </div>
+
+            <p class="game-info">
+                Ada satu pesan rahasia untuk kamu.
+            </p>
+
+            <p>
+                Masukkan PIN 6 digit untuk membukanya 👀
+            </p>
+
+
+            <div class="pin-box">
+
+                <input
+                    id="pinInput"
+                    type="password"
+                    inputmode="numeric"
+                    maxlength="6"
+                    placeholder="••••••">
+
+                <button onclick="checkPin()">
+                    🔓 UNLOCK
+                </button>
+
+            </div>
+
+
+            <p class="hint">
+                Hint: Tarikh Lahir Little Princess
+            </p>
+
+
+            <p
+                id="pinResult"
+                class="pin-result">
+            </p>
+
+
+            <div
+                id="secretMessage"
+                class="secret-message hidden">
+
+                💗✨
+
+                <br><br>
+
+                Kalau kamu sudah sampai di sini,
+                berarti kamu berhasil menemukan
+                pesan rahasia ini. 😆
+
+                <br><br>
+
+                Terima kasih sudah meluangkan waktu
+                untuk melihat semua surprise kecil
+                yang aku buat.
+
+                <br><br>
+
+                Semoga kamu selalu bahagia,
+                selalu tersenyum,
+                dan jangan pernah lupa
+                kalau kamu sangat berarti. 🤍
+
+                <br><br>
+
+                Happy Birthday,
+                Little Princess. 🎂🎀
+
+                <br><br>
+
+                — Danish 💗
+
+            </div>
+
+        </div>
+
+
+
+        <div class="divider">
+            ♡ ♡ ♡
+        </div>
+
+        <p class="ending">
+            End of your little surprise 🎀
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+  </html>
