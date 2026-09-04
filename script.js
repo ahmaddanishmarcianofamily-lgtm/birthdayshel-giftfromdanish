@@ -179,7 +179,7 @@ function startHeartGame(){
     document.getElementById("heartResult")
     .innerHTML="";
 
-    document.getElementById("heartStart")
+    document.getElementById("startHeartButton")
     .disabled=true;
 
     const area=
@@ -337,7 +337,7 @@ function endHeartGame(){
     document.getElementById("timerText")
     .innerHTML="Time: 0s";
 
-    document.getElementById("heartStart")
+    document.getElementById("startHeartButton")
     .disabled=false;
 
     document.getElementById("heartResult")
