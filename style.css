@@ -402,3 +402,94 @@ width:160px;
 }
 
   }
+/* =================================
+   EXTRA PINK AESTHETIC BACKGROUND
+================================= */
+
+body{
+    background:
+        radial-gradient(circle at 15% 15%,
+            rgba(255,255,255,.85) 0 3px,
+            transparent 4px),
+
+        radial-gradient(circle at 85% 25%,
+            rgba(255,255,255,.7) 0 4px,
+            transparent 5px),
+
+        radial-gradient(circle at 25% 80%,
+            rgba(255,255,255,.75) 0 3px,
+            transparent 4px),
+
+        radial-gradient(circle at 75% 75%,
+            rgba(255,255,255,.7) 0 4px,
+            transparent 5px),
+
+        radial-gradient(circle at 50% 40%,
+            rgba(255,182,213,.8),
+            transparent 35%),
+
+        linear-gradient(
+            135deg,
+            #ffb6d5 0%,
+            #ffd6e7 30%,
+            #fff0f7 55%,
+            #ffc1dc 80%,
+            #ff9fc7 100%
+        );
+
+    background-attachment:fixed;
+}
+
+
+/* Soft pink glow */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:-100px;
+    pointer-events:none;
+    z-index:-2;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255,105,170,.25),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 60%,
+            rgba(255,170,210,.3),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(255,120,180,.2),
+            transparent 25%
+        );
+
+    filter:blur(30px);
+}
+
+
+/* Floating aesthetic particles */
+
+body::after{
+    content:"♡   ✦   ♡   ✧   ♡   ✦   ♡";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:rgba(255,255,255,.28);
+    font-size:35px;
+    letter-spacing:35px;
+
+    transform:rotate(-15deg);
+    filter:blur(.3px);
+}
